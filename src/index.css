@@ -1,0 +1,27 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Poppins';
+    background-color: #0d0f14;
+    background-image: url('https://i.postimg.cc/d1YRftxD/max-di-capua-CXys6xy-Rx-M-unsplash-1.jpg');
+}
+
+html {
+    overflow:   scroll;
+  }
+  ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent; /* make scrollbar transparent */
+  }
+
+.coinValue {
+    margin-left: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.label {
+    margin-left: 30px;
+    font-weight: lighter;
+    color: white;
+}
