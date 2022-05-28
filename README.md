@@ -1,8 +1,7 @@
 # Crypto-Currency Data Retriever
-A crypto-currency data retrieving application powered by react.<br>
-**Visit the website: https://renisal.github.io/cryptodata-retriever**<br>
-
-<img target="_blank" src="https://skillicons.dev/icons?i=html,css,bootstrap,js,nodejs,react,ts" height="50px" width="300px">
+A real-time crypto-currency data retrieving application powered by react.<br>
+**Visit the website: https://renisal.github.io/cryptodata-retriever**<br><br>
+<img src="https://i.postimg.cc/zvfWgdBF/build.png" height="300px" width="550px"/>
 
 ## Available Scripts
 
