@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cryptodata-retriever/static/css/main.fc7a896e.css",
+    "main.js": "/cryptodata-retriever/static/js/main.81d2c4b1.js",
+    "index.html": "/cryptodata-retriever/index.html",
+    "main.fc7a896e.css.map": "/cryptodata-retriever/static/css/main.fc7a896e.css.map",
+    "main.81d2c4b1.js.map": "/cryptodata-retriever/static/js/main.81d2c4b1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fc7a896e.css",
+    "static/js/main.81d2c4b1.js"
+  ]
+}
