@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/cryptodata-retriever/static/css/main.59df3ac4.css",
-    "main.js": "/cryptodata-retriever/static/js/main.fb00653e.js",
+    "main.js": "/cryptodata-retriever/static/js/main.f0127659.js",
     "index.html": "/cryptodata-retriever/index.html",
     "main.59df3ac4.css.map": "/cryptodata-retriever/static/css/main.59df3ac4.css.map",
-    "main.fb00653e.js.map": "/cryptodata-retriever/static/js/main.fb00653e.js.map"
+    "main.f0127659.js.map": "/cryptodata-retriever/static/js/main.f0127659.js.map"
   },
   "entrypoints": [
     "static/css/main.59df3ac4.css",
-    "static/js/main.fb00653e.js"
+    "static/js/main.f0127659.js"
   ]
 }
