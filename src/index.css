@@ -1,9 +1,14 @@
-@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+@import "https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700";
+@import "https://use.fontawesome.com/releases/v6.0.0/css/all.css";
 
 body {
-    font-family: 'Poppins';
-    background-color: #0d0f14;
-    background-image: url('https://i.postimg.cc/d1YRftxD/max-di-capua-CXys6xy-Rx-M-unsplash-1.jpg');
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menuitems:hover {
+    color: #172645;
 }
 
 html {
@@ -14,14 +19,47 @@ html {
       background: transparent; /* make scrollbar transparent */
   }
 
+#coinPrice {
+    left: 20%;
+    position: absolute;
+}
+
+#coin24hRate {
+    left: 32%;
+    position: absolute;
+}
+
+#coinChange {
+    left: 42%;
+    position: absolute;
+}
+
+#coinMktCap {
+    left: 52%;
+    position: absolute;
+}
+
+span {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+
+#coinVolume {
+    left: 69%;
+    position: absolute;
+}
+
+#coinSupply {
+    left: 84%;
+    position: absolute;
+}
+
+
 .coinValue {
     margin-left: 10px;
-    font-weight: bold;
-    color: white;
 }
 
 .label {
     margin-left: 30px;
-    font-weight: lighter;
-    color: white;
 }

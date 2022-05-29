@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Datacard from './Datacard';
 import axios from 'axios';
-import Footer from './Footer';
+import Navbar from './Navbar';
 
 export default function App() {
   
@@ -18,13 +18,13 @@ export default function App() {
     if (param === 'default') {
       let recordList: any[] = []
     myArray.forEach(element => {
-      return recordList.push(<Datacard icon={element.image} name={element.id} price={element.current_price} rate={element.price_change_percentage_24h.toFixed(2)} marketcap={element.market_cap}/>)
+      return recordList.push(<Datacard icon={element.image} name={element.name} shortName={element.symbol.toUpperCase()} price={element.current_price} rate={element.price_change_percentage_24h.toFixed(2)} priceChange={element.price_change_24h.toFixed(3)} marketcap={element.market_cap} volume={element.total_volume} circulatingSupply={element.circulating_supply}/>)
     });
     return recordList; }
     else {
       let recordList: any[] = []
     myArray.forEach(element => {
-      return recordList.push(<Datacard icon={element.image} name={element.id} price={element.current_price} rate={element.price_change_percentage_24h.toFixed(2)} marketcap={element.market_cap}/>)
+      return recordList.push(<Datacard icon={element.image} name={element.name} shortName={element.symbol.toUpperCase()} price={element.current_price} rate={element.price_change_percentage_24h.toFixed(2)} priceChange={element.price_change_24h.toFixed(3)} marketcap={element.market_cap} volume={element.total_volume} circulatingSupply={element.circulating_supply}/>)
     });
     return recordList;
     }
@@ -34,7 +34,7 @@ export default function App() {
     setMyArray([])
       axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=300&page=1&sparkline=false').then((response) => {
         response.data.forEach((element: any) => {
-          if (element.id.toLowerCase().match(event.target.value.toLowerCase())) {
+          if (element.name.toLowerCase().match(event.target.value.toLowerCase())) {
           setMyArray(oldArray => [...oldArray, element]); }
         });
       });
@@ -48,15 +48,25 @@ export default function App() {
 
   return (
     <div>
-    <div className="card my-4" style={{width: "50rem", height: "37rem", marginLeft: "15rem", borderWidth: "0px", overflowY: "scroll", backgroundColor: "rgb(7, 7, 6, 0.8)"}}>
-    <div className="input-group">
-    <div className="form-outline"><label style={{color: "#d3d3d3", marginLeft: "5px"}}>Time: {time()} </label><label style={{position: "absolute", marginLeft: "67%", marginTop: "5px", color: "#d3d3d3"}}>by <a style={{cursor: "pointer", color: "#5674e3", textDecoration: "none"}} href='https://github.com/renisal' target='_blank' rel="noreferrer" >renisal</a></label>
-    <input placeholder='Enter cryptocurrency name here' onChange={onSearch} style={{marginLeft: "12rem", backgroundColor: "#171712", color: "white", borderColor: "#696969"}} type="search" id="form1" className="form-control my-3" />
-  </div>
+      <Navbar/>
+      <div className="card" style={{height: "40px", borderBottom: "0px"}}>
+        <div className="input-group my-2">
+    <div className="form-outline">
+   <label style={{position: "absolute", marginLeft: "10px", color: "#383838"}}>Latest Data Retrieved: {time()}</label><input placeholder='Search cryptocurrency' onChange={onSearch} style={{height: "25px", width: "300px", marginLeft: "800px", borderColor: "#696969"}} type="search" id="form1" className="form-control" />
+    </div>
 </div>
+        </div>
+    <div className="card" style={{width: "100%", height: "100%", backgroundColor: "rgb(7, 7, 6, 0.0)"}}>
+      <span style={{color: "white", zIndex: "1", opacity: "1.0", marginBottom: "8px", backgroundColor: "#172645", paddingBottom: "5px"}}><label style={{marginTop: "3px", marginLeft: "30px"}}>Name</label>
+      <label style={{marginTop: "3px", marginLeft: "15%"}}>Price</label>
+      <label style={{marginTop: "3px", marginLeft: "10%"}}>24h %</label>
+      <label style={{marginTop: "3px", marginLeft: "6%"}}>24h $</label>
+      <label style={{marginTop: "3px", marginLeft: "8%"}}>Market Cap</label>
+      <label style={{marginTop: "3px", marginLeft: "9%"}}>Total Volume</label>
+      <label style={{marginTop: "3px", marginLeft: "8%"}}>Circulating Supply</label>
+      </span>
 {renderListing('default')}
 </div>
-<Footer/>
     </div>
   );
 }
