@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export default function Datacard(props: {
+export default function Currencies(props: {
   icon: string;
   name: string;
   shortName: string;
@@ -12,7 +12,7 @@ export default function Datacard(props: {
     | string
     | number
     | boolean;
-    priceChange:
+    rate7d:
     | string
     | number
     | boolean;
@@ -70,8 +70,8 @@ export default function Datacard(props: {
             <label id="coinMktCap" className="coinValue">
               ${props.marketcap.toLocaleString("en-US")}
             </label>
-            <label id='coinChange'>
-                {props.priceChange}$
+            <label id='coin7dRate' style={{color: props.rate7d < 0 ? "red":"green"}}>
+                {props.rate7d}%
             </label>
             <label id='coinVolume'>
                 ${props.volume.toLocaleString("en-US")}
