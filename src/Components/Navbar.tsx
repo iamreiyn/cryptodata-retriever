@@ -8,7 +8,7 @@ function Navbar() {
           style={{ backgroundColor: "white" }}
         >
           <div className="container-fluid" style={{ backgroundColor: "white" }}>
-              <img src='https://i.postimg.cc/G3D0Mp6F/gt1.png' alt='logo'/>
+              <a href='/' style={{textDecoration: "none"}}><h2 style={{fontWeight: "bolder"}}><label style={{color: "#172645", cursor: "pointer"}}>CryptoData</label> Retriever</h2></a>
             <button
               className="navbar-toggler"
               type="button"
@@ -61,7 +61,7 @@ function Navbar() {
                     Bug Report
                   </a>
                 </li>
-                <li className="nav-item" style={{ marginLeft: "23rem" }}>
+                <li className="nav-item" style={{ marginLeft: "20rem" }}>
                   <a
                     target="_blank"
                     rel="noreferrer"
