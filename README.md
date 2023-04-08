@@ -1,6 +1,6 @@
 # Crypto-Currency Data Retriever
 A real-time crypto-currency data retrieving application powered by react.<br>
-**Visit the website: https://renisal.github.io/cryptodata-retriever**<br><br>
+**Visit the website: https://montymahato.github.io/cryptodata-retriever**<br><br>
 <img src="https://i.postimg.cc/7L0Ch8K8/Screenshot-2022-05-29-115005.png" height="300px" width="550px"/>
 
 ## Available Scripts
